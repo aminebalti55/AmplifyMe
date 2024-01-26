@@ -1,0 +1,31 @@
+<!-- add-social-page-dialog.component.html -->
+<h2 mat-dialog-title class="dialog-title">Add Social Page</h2>
+<div mat-dialog-content>
+  <form #form="ngForm">
+    <mat-form-field class="form-field">
+      <input matInput placeholder="Page Link" [(ngModel)]="socialPage.pageLink" name="pageLink" required>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Social Media Type</mat-label>
+      <mat-select [(ngModel)]="socialPage.socialMediaType" name="socialMediaType" required>
+        <mat-option *ngFor="let type of socialMediaTypes" [value]="type">{{ type }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Social Operation</mat-label>
+      <mat-select [(ngModel)]="socialPage.socialOperation" name="socialOperation" required>
+        <mat-option *ngFor="let operation of socialOperations" [value]="operation">{{ operation }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <input matInput type="number" placeholder="Points To Spend" [(ngModel)]="socialPage.pointsToSpend" name="pointsToSpend" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="cancel-button" (click)="onNoClick()">Cancel</button>
+  <button mat-button class="add-button" [disabled]="!form.valid" (click)="addSocialPage()">Add</button>
+</div>

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --main-color: #22BAA0;
+    --color-dark: #34425A;
+    --text-grey: #B0B0B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+}
+
+
+
+.main-content {
+    margin-left: 165px;
+    width: calc(100% - 165px);
+    transition: margin-left 300ms;
+}
+
+
+main {
+    margin-top: 60px;
+}
+
+
+
+
+td.align-middle a.btn {
+  padding: 0.3rem 0.7rem; /* Adjust the padding as needed to make the buttons smaller */
+  margin-left: 8px;
+  margin-top: 15px;/* Add margin-left to separate the buttons */
+}
+
+.table-responsive {
+    width: 100%;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead tr {
+    background: #e9edf2;
+}
+
+table thead th {
+    padding: 1rem 0rem;
+    text-align: left;
+    color: #444;
+    font-size: .9rem;
+}
+
+table thead th:first-child {
+    padding-left: 1rem;
+}
+
+table tbody td {
+    padding: 1rem 0rem;
+    color: #444;
+}
+
+table tbody td:first-child {
+    padding-left: 1rem;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dee2e8;
+}
+
+
+    table {
+        width: 900px;
+    }
+
+

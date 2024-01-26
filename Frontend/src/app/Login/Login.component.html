@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<body>
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx"><img src="../../assets/images/img.png" alt="" /></div>
+
+        <div class="formBx">
+
+          <form action=""  (ngSubmit)="onLoginSubmit()">
+            <img src="../../assets/images/logo-v1.png" alt="Logo" class="logo">
+
+            <h2>Sign In</h2>
+            <input type="text" name="username" [(ngModel)]="username" placeholder="Username" />
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Password" />
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Don't have an account ?
+              <a (click)="toggleForm()">Sign Up.</a>
+            </p>
+            <div class="social-icons">
+              <a (click)="loginWithGoogle()" >
+
+                <i class="fab fa-google"></i>
+
+              </a>
+
+              <a (click)="facebookLogin()">
+                <i class="fab fa-facebook"></i> Facebook
+              </a>
+
+              <a (click)="loginWithLinkedIn()"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form (ngSubmit)="signup()">
+            <h2>Create an account</h2>
+            <input type="text" name="fullname" placeholder="Full Name" [(ngModel)]="user.fullname" required />
+            <input type="text" name="username" placeholder="Username" [(ngModel)]="user.username" required />
+            <input type="email" name="email" placeholder="Email Address" [(ngModel)]="user.email" required />
+            <input type="password" name="password" placeholder="Create Password" [(ngModel)]="user.password" required />
+            <input type="submit" value="Sign Up"  />
+            <p class="signup">
+              Already have an account? <a (click)="toggleForm()">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="../../assets/images/img2.png" alt="" /></div>
+      </div>
+    </div>
+  </section>
+</body>
+
+<script src="../../assets/js/myjs.js"></script>
+
+
